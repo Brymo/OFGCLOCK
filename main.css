@@ -15,7 +15,7 @@
 
 #time{
     width:100%;
-    font-size: 4em;
+    font-size: 16vw;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -23,7 +23,7 @@
 
 #date{
     width:100%;
-    font-size: 3em;
+    font-size: 8vw;
     display: flex;
     justify-content: center;
     align-items: center;
