@@ -1,4 +1,5 @@
 
+const urlParams =  new URLSearchParams(window.location.search);
 
 let lastPlayedWarningMinute = -1;
 let lastPlayedShortMinute = -1;
@@ -16,7 +17,6 @@ function updateTime() {
     document.getElementById('time').innerHTML = aestTime;
     document.getElementById('date').innerHTML = aestDate;
 
-    const urlParams = new URLSearchParams(window.location.search);
     const pti = urlParams.get('pti');
     if(pti === 'true'){
         // Play bell on 5-minute intervals
@@ -48,7 +48,10 @@ function toggleDarkMode() {
     document.body.classList.toggle('dark-mode');
 }
 
-
+const exam = urlParams.get('exam') === 'true';
+if(exam){
+    document.getElementById('exam-details').style.display = 'block';
+}
 
 document.body.addEventListener('click', toggleDarkMode);
 setInterval(updateTime, 1000);

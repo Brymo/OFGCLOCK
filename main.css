@@ -31,3 +31,16 @@
     justify-content: center;
     align-items: center;
 }
+
+#exam-details{
+    display: none;
+    width: 80%;
+    height: 20vh;
+    font-size: 2vw;
+    padding: 10px;
+    color: grey;
+    margin-top: 20px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
