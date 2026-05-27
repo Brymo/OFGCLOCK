@@ -22,13 +22,16 @@ function updateTime() {
         // Play bell on 5-minute intervals
         const minutes = now.getMinutes();
 
+        const warningMinutes = [5,11,17,23,29,35,41,47,53,59];
+        const shortMinutes = [0,6,12,18,24,30,36,42,48,54];
+
         console.log(minutes);
-        if ((minutes % 10 === 4 || minutes % 10  === 9 ) && minutes !== lastPlayedWarningMinute ) {
+        if (warningMinutes.includes(minutes) && minutes !== lastPlayedWarningMinute ) {
             warning.currentTime = 0;
             warning.play();
             lastPlayedWarningMinute = minutes;
         }
-        if ((minutes % 10  === 5 ||  minutes % 10  === 0) && minutes !== lastPlayedShortMinute ) {
+        if (shortMinutes.includes(minutes) && minutes !== lastPlayedShortMinute ) {
             short.currentTime = 0;
             short.play();
             lastPlayedShortMinute = minutes;
