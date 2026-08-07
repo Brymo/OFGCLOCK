@@ -51,6 +51,7 @@ function toggleDarkMode() {
 const exam = urlParams.get('exam') === 'true';
 if(exam){
     document.getElementById('exam-details').style.display = 'block';
+    document.title = 'OFG Exam Clock';
 }
 
 document.body.addEventListener('click', toggleDarkMode);
